@@ -1,0 +1,9 @@
+#features-menu li a.icon-vocabulary span.icon {
+  background:url(images/word2word.png) no-repeat;
+}
+
+.feature .feature-atriumed-quizlet {
+  background:transparent url(images/icon.png) no-repeat;
+}
+
+span.spaces-feature.feature-atriumed-quizlet { background:url(images/icon.png) no-repeat; height:20px; width:20px; }
