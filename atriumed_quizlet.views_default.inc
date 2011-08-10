@@ -19,7 +19,7 @@ function atriumed_quizlet_views_default_views() {
   $handler = $view->new_display('default', 'Group Vocabulary Lists', 'default');
   $handler->override_option('fields', array(
     'title' => array(
-      'label' => 'Title',
+      'label' => 'Vocabulary List Title',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -50,6 +50,38 @@ function atriumed_quizlet_views_default_views() {
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'name' => array(
+      'label' => 'Added By',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_user' => 1,
+      'overwrite_anonymous' => 0,
+      'anonymous_text' => '',
+      'exclude' => 0,
+      'id' => 'name',
+      'table' => 'users',
+      'field' => 'name',
       'relationship' => 'none',
     ),
   ));
@@ -116,6 +148,29 @@ function atriumed_quizlet_views_default_views() {
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
+  ));
+  $handler->override_option('title', 'Group Vocabulary Lists');
+  $handler->override_option('style_plugin', 'table');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'override' => 1,
+    'sticky' => 0,
+    'order' => 'asc',
+    'columns' => array(
+      'title' => 'title',
+      'name' => 'name',
+    ),
+    'info' => array(
+      'title' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+      'name' => array(
+        'sortable' => 0,
+        'separator' => '',
+      ),
+    ),
+    'default' => '-1',
   ));
   $handler = $view->new_display('page', 'Group Vocabulary Lists', 'page_1');
   $handler->override_option('path', 'vocabulary');
