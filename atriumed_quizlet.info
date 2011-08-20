@@ -1,7 +1,6 @@
 core = "6.x"
 dependencies[] = "boxes"
 dependencies[] = "context"
-dependencies[] = "flag"
 dependencies[] = "quizlet"
 dependencies[] = "spaces"
 dependencies[] = "strongarm"
