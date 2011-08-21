@@ -8,3 +8,31 @@ include_once('atriumed_quizlet.features.inc');
 function atriumed_quizlet_init() {
   drupal_add_css(drupal_get_path('module', 'atriumed_quizlet') .'/atriumed_quizlet.css');
 }
+
+/**
+* Implementation of hook_help().
+*/
+function atriumed_quizlet_help($path) {
+  // Central help page content.
+  if ($path == 'admin/help#quizlet') {
+    $help = '<h3>'. t('Vocabulary Lists') .'</h3>';
+    $help .= '<p>'. t("Vocabulary section integrates vocabulary lists from Quizlet.com lettting you add vocabulary and study activities.") .'</p>';
+    $help .= '<p>'. t("To add quizlet vocabulary, navigate to the Vocabulary section and search for vocabulary lists by keyword.  Then click __Save__ to add to your group.") .'</p>';
+    return $help;
+  }
+
+  // Contextual help content.
+  if (context_isset('context', 'quizlet')) {
+    if ($path == 'node/add/quizlet') {
+      $help = '';
+      $help .= '<h3>'. t('Quizlet') .'</h3>';
+      $help .= '<p>'. t("Add a Quizlet List in this group by adding the Quizlet Vocabulary List ID number.") .'</p><p>' .t("Not sure? Search first by keyword and then save the list.") .'</p>';
+      return $help;
+    }
+    else {
+      $help = '<h3>'. t('Quizlet') .'</h3>';
+      $help .= '<p>'. t("Add vocabulary from Quizlet.com. ") . '</p><p>' . t("First Search for Relevant Vocabulary Lists by Keyword, then save them to access Flashcard and other learning functions.") .'</p>';
+      return $help;
+    }
+  }
+}

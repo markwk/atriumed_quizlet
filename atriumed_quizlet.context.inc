@@ -84,17 +84,11 @@ function atriumed_quizlet_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-vocabulary_feature_description' => array(
-          'module' => 'boxes',
-          'delta' => 'vocabulary_feature_description',
-          'region' => 'right',
-          'weight' => 0,
-        ),
         'quizlet-0' => array(
           'module' => 'quizlet',
           'delta' => 0,
           'region' => 'right',
-          'weight' => 1,
+          'weight' => 0,
         ),
       ),
     ),
