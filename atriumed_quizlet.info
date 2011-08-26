@@ -10,7 +10,6 @@ description = "Provides way for teachers to incorporate quizlet lists into group
 features[content][] = "quizlet-field_test_quizlet"
 features[context][] = "quizlet"
 features[context][] = "quizlet-main"
-features[ctools][] = "boxes:box:1"
 features[ctools][] = "context:context:3"
 features[ctools][] = "strongarm:strongarm:1"
 features[user_permission][] = "administrator quizlet"
