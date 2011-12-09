@@ -28,6 +28,8 @@ function atriumed_quizlet_user_default_permissions() {
     'name' => 'delete any quizlet content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
+      '2' => 'teacher',
     ),
   );
 
@@ -36,6 +38,8 @@ function atriumed_quizlet_user_default_permissions() {
     'name' => 'edit any quizlet content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
+      '2' => 'teacher',
     ),
   );
 
